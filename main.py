@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
@@ -63,5 +64,23 @@ plt.show()
 
 # Relatório de Classificação (Precision, Recall, F1-Score)
 print(classification_report(y_test, y_pred))
+
+
+
+# Definir os parâmetros que queremos testar
+param_grid = {
+    'n_estimators': [100, 200, 300],
+    'max_depth': [None, 10, 20, 30],
+    'min_samples_split': [2, 5, 10],
+}
+
+# Inicializar o GridSearchCV com RandomForest
+grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, verbose=2, n_jobs=-1)
+
+# Treinar com a busca de hiperparâmetros
+grid_search.fit(X_train, y_train)
+
+# Melhor combinação de parâmetros
+print(grid_search.best_params_)
 
 
