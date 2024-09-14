@@ -2,7 +2,7 @@
 
 
 ## 1. Parcerias-Chave
-## Hospitais: Para obter dados clínicos, validar o sistema e integrar o diagnóstico com práticas médicas reais.
+Hospitais: Para obter dados clínicos, validar o sistema e integrar o diagnóstico com práticas médicas reais.
 Unidades Básicas de Saúde (UBS): Para acesso a dados de saúde pública e feedback sobre a eficácia do sistema em um contexto de cuidados primários.
 Farmácias: Para informações sobre medicamentos e tratamentos, além de integrar com sistemas de prescrição e orientação ao paciente.
 Organizações de Pesquisa: Para colaborar em estudos clínicos e validação do modelo.
